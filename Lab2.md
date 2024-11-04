@@ -6,6 +6,7 @@
 ### #1. Phân tích Ca Sử Dụng Create Employee
 **Tác nhân**:
 - **Quản trị viên Bảng lương**: Quản trị viên bảng lương có thể thêm nhân viên mới, thiết lập phân loại thanh toán của họ và ghi lại các chi tiết khác. Trường hợp sử dụng này cho phép thêm nhân viên mới vào hệ thống, đảm bảo họ có thể nhận được thanh toán theo phương thức và loại thanh toán đã chỉ định (theo giờ, theo lương hoặc theo hoa hồng).
+- 
 **Các bước**:
 1. Quản trị viên bảng lương chọn tùy chọn thêm nhân viên mới.
 2. Hệ thống hiển thị biểu mẫu để nhập thông tin chi tiết về nhân viên như tên, địa chỉ, loại thanh toán, tỷ lệ hoa hồng (nếu có) và phương thức thanh toán.
