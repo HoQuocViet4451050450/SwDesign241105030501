@@ -72,3 +72,140 @@ Các bước:
 3. Quản trị viên chọn nhân viên và cập nhật thông tin cần thiết như địa chỉ, tên, hoặc phân loại thanh toán (hàng giờ, lương cố định, hoặc lương cố định có hoa hồng).
 4. Hệ thống xác thực và lưu các thay đổi.
 5. Quản trị viên nhận thông báo về việc cập nhật thành công hồ sơ nhân viên.
+
+## Lab2: Viết code Java mô phỏng ca sử dụng Maintain Timecard.
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+// Lớp Timecard đại diện cho một thẻ chấm công
+class Timecard {
+    private LocalDate date;
+    private double hoursWorked;
+
+    public Timecard(LocalDate date, double hoursWorked) {
+        this.date = date;
+        this.hoursWorked = hoursWorked;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public double getHoursWorked() {
+        return hoursWorked;
+    }
+
+    @Override
+    public String toString() {
+        return "Date: " + date + ", Hours Worked: " + hoursWorked;
+    }
+}
+
+// Lớp Employee đại diện cho một nhân viên và chứa các thẻ chấm công của họ
+class Employee {
+    private int employeeId;
+    private String name;
+    private List<Timecard> timecards;
+
+    public Employee(int employeeId, String name) {
+        this.employeeId = employeeId;
+        this.name = name;
+        this.timecards = new ArrayList<>();
+    }
+
+    public int getEmployeeId() {
+        return employeeId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void addTimecard(Timecard timecard) {
+        timecards.add(timecard);
+    }
+
+    public List<Timecard> getTimecards() {
+        return timecards;
+    }
+
+    public void displayTimecards() {
+        System.out.println("Timecards for Employee: " + name);
+        for (Timecard timecard : timecards) {
+            System.out.println(timecard);
+        }
+    }
+}
+
+// Lớp PayrollSystem quản lý danh sách nhân viên và chức năng thêm thẻ chấm công
+class PayrollSystem {
+    private List<Employee> employees;
+
+    public PayrollSystem() {
+        this.employees = new ArrayList<>();
+    }
+
+    public void addEmployee(Employee employee) {
+        employees.add(employee);
+    }
+
+    public Employee findEmployeeById(int employeeId) {
+        for (Employee employee : employees) {
+            if (employee.getEmployeeId() == employeeId) {
+                return employee;
+            }
+        }
+        return null;
+    }
+
+    public void addTimecardToEmployee(int employeeId, LocalDate date, double hoursWorked) {
+        Employee employee = findEmployeeById(employeeId);
+        if (employee != null) {
+            Timecard timecard = new Timecard(date, hoursWorked);
+            employee.addTimecard(timecard);
+            System.out.println("Timecard added for Employee ID: " + employeeId);
+        } else {
+            System.out.println("Employee not found.");
+        }
+    }
+}
+
+// Lớp Main để chạy chương trình và mô phỏng chức năng thêm thẻ chấm công
+public class Main {
+    public static void main(String[] args) {
+        PayrollSystem payrollSystem = new PayrollSystem();
+
+        // Tạo một số nhân viên
+        Employee emp1 = new Employee(1, "Alice");
+        Employee emp2 = new Employee(2, "Bob");
+
+        // Thêm nhân viên vào hệ thống
+        payrollSystem.addEmployee(emp1);
+        payrollSystem.addEmployee(emp2);
+
+        Scanner scanner = new Scanner(System.in);
+
+        // Nhập thông tin thẻ chấm công
+        System.out.print("Enter Employee ID: ");
+        int employeeId = scanner.nextInt();
+        System.out.print("Enter Date (yyyy-mm-dd): ");
+        String dateString = scanner.next();
+        LocalDate date = LocalDate.parse(dateString);
+        System.out.print("Enter Hours Worked: ");
+        double hoursWorked = scanner.nextDouble();
+
+        // Thêm thẻ chấm công vào hệ thống
+        payrollSystem.addTimecardToEmployee(employeeId, date, hoursWorked);
+
+        // Hiển thị thẻ chấm công của nhân viên
+        Employee employee = payrollSystem.findEmployeeById(employeeId);
+        if (employee != null) {
+            employee.displayTimecards();
+        }
+
+        scanner.close();
+    }
+}
