@@ -1,6 +1,7 @@
 # Hồ Quốc Việt  
 ## Lab3: Xác định các phần tử thiết kế của hệ thống “Payroll System”
-### #. Subsystem context diagrams 
+
+# Subsystem context diagrams 
 ![Diagram](https://www.planttext.com/api/plantuml/png/X5JBRjim4BpxAmYVtC89a2iFHTga0N9m6yG5UbwJQvknIAgxP02Zw9Vrq4_gBvICdcman0S3qiw-PcRrz_UVQmv08TfgiL0LC8i7E9ElgksP0rhnSo7oxu0E2GAce3gYEl5AfoSfRjF_EocUlT4by15hJu5NQElAdn7ljHJRGCOT4hm9DWarUONCtun51QHvLPHhem-Hr14Olv966Y2_kfa_jrswSKtVhNbsOB5yKyFPeWiR34V_7_Ze8_5tJoTCWRlAGpkfyjOQPkFTuylken131NGkNyMTDQ5RQqJNkcdGWjSYBKO7_1Bj3cd4qS11KwcWe2W7raSNsdglg6db_AYjSOP3qiPJHnDetJ7N2oLxCeiXD5OOy1Mwa7L0npeFsA7ltTvFPAo5IG4fDb0NoHHTvvx1A_q-dy2TIc-cdHplaUwYI_O1fHewkYPlq9D0OOlqR5JldZg_kyasdvpwhOB-2LNOW8C3PeibaM2NX1jEATKU9B_50ARYrOmD6cXcCBVeVRwyMegB2x5ylnITnOHidSAJiC8_8snvxZdXylB3S51Is9TDve2Jzf99sO2q1pMRDv9HfijoBd4sssEiaHIHvwUP9L-A7n79fCnMfvwsLfRXeaPVWVB-9nGQwLxmErEqi4xElKQdyxVt7m000F__0m00)  
 **1. BankSystem (Hệ thống Ngân hàng)**  
 - Xử lý tất cả các giao dịch tài chính. 
