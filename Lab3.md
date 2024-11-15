@@ -74,5 +74,7 @@
 | ProjectData                  | Business Services::ProjectInfo     |
 
 ---
-#. Architectural layers and their dependencies 
+
+# Architectural layers and their dependencies 
+
 ![Diagram](https://www.planttext.com/api/plantuml/png/X5GxRiCm3Drz2g5BfroXo6_9aA9enY83ep2E6bao9Bf1KEHa7NgaNg6IgpYMBADURF2HZ-GZwP-lxwabCDHKih0deMemKB4Q-0bAtD158ZF82LGfiIY2dJtCwbeA3YIqiW_iis3kUNk1Yz5IBhGY_qQp3NOZ56Mi-jqnz-tNNeQrsEybdi7WZR-3vg1E6pGVWcENlALSjSZ54bRRkpKrNcEs9H3CkADAk49z7jw1nHvXGDQW7465Al59-FELjfe4AA9EpTT8bNbZXNAbifIrymX3O3D3uW2SuhmEvKVafsobNYYsH08XuoWFhDH1cwgTU5v6pHklHJxlAzRQK3Omg9cFMnp1bFZSLBlRtWoYMy68X2gJLZtoNzKXkNTBWhlXzyRmw5Gr-cmPQRP7fGdTgqRblhb0MsGkW4qcJybYZdhTXpCucK0JhyU8rx3npArrXCcIZxh6aoYYbluyeXxZKdk5tQiV9BzvZLxNr4djVrI_0000__y30000)  
